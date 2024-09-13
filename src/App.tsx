@@ -2,15 +2,24 @@ import { SimpleGrid, GridItem } from "@chakra-ui/react";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import ImageTile from "./Components/ImageTile";
-import bgimg from "./Images/15B9D2AD-219B-442E-9DF8-FEF33DF5C2AD.jpeg";
-import BackgroundImageRotation from "./Components/BackgroundImageRotation";
+import { bgImages } from "./assets/BackgroundImageList";
+import initialImage from "./Images/15B9D2AD-219B-442E-9DF8-FEF33DF5C2AD.jpeg";
 
 function App() {
   const menuItems = ["Home", "Gallery", "Book Session", "More"];
+  let imgNumber = 0;
+  let bgImage = null;
+
+  let rotateImg = () => {
+    let total = bgImages.length;
+    imgNumber = (imgNumber + 1) % total;
+    bgImage = bgImages[imgNumber];
+  };
+
   return (
-    <BackgroundImageRotation>
+    <div>
       <SimpleGrid
-        bgImage={`${bgimg}`}
+        bgImage={`${initialImage}`}
         templateAreas={`"header header header header"
         "main main main main"
         "footer footer footer footer"`}
@@ -31,7 +40,7 @@ function App() {
           Footer
         </GridItem>
       </SimpleGrid>
-    </BackgroundImageRotation>
+    </div>
   );
 }
 
