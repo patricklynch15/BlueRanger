@@ -9,7 +9,7 @@ const NavBar = ({ menuItems }: props) => {
     <HStack opacity={"50"} justify={"space-evenly"}>
       {menuItems.map((item) => {
         return (
-          <Text margin={"10px"} opacity={10} key={item}>
+          <Text id="navbar" margin={"10px"} opacity={10} key={item}>
             {item}
           </Text>
         );

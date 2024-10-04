@@ -1,3 +1,15 @@
 #CentralText {
   color: blue;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: aqua;
+}
+
+#navbar {
+  font-family: "Courier New", Courier, monospace;
+  font-size: x-large;
 }
