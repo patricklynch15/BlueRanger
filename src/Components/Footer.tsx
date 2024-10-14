@@ -1,7 +1,12 @@
-import React from "react";
+import { ReactNode } from "react";
 
-const Footer = () => {
-  return <div>Footer</div>;
+interface props {
+  children: ReactNode;
+  id: string;
+}
+
+const Footer = ({ children, id }: props) => {
+  return <div id={id}>{children}</div>;
 };
 
 export default Footer;

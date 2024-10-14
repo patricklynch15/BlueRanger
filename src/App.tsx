@@ -1,20 +1,18 @@
-import { SimpleGrid, GridItem, Image } from "@chakra-ui/react";
-import { useState } from "react";
+import Background from "./Components/Background";
 import "./App.css";
 import NavBar from "./Components/NavBar";
-import defaultBackground from "./Images/IMG_6678.jpeg";
-import Background from "./Components/Background";
 import Footer from "./Components/Footer";
+import { VStack } from "@chakra-ui/react";
 
 function App() {
   const menuItems = ["Home", "Gallery", "Book Session", "More"];
-  const [background, setBackground] = useState(`${defaultBackground}`);
 
   return (
-    <>
-      <NavBar menuItems={menuItems} />
-      <p id="CentralText"> Here's some sample text</p>
-    </>
+    <VStack id="app" justify={"center"} width={"100%"}>
+      <NavBar id="navBar" menuItems={menuItems} />
+      <Background id="mainArea">Main Area</Background>
+      <Footer id="footer">Footer</Footer>
+    </VStack>
   );
 }
 

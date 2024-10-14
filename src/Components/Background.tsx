@@ -1,18 +1,18 @@
-import { Container, Image } from "@chakra-ui/react";
-import React, { ReactNode } from "react";
+import { Box, Container } from "@chakra-ui/react";
+import { ReactNode } from "react";
 import defaultBackground from "../Images/IMG_6678.jpeg";
 
 interface props {
-  children?: ReactNode;
+  children: ReactNode;
+  id: string;
 }
 
-const Background = ({ children }: props) => {
+const Background = ({ children, id }: props) => {
   return (
-    <Container backgroundImage={defaultBackground} objectFit={"contain"}>
+    <Box id={id} objectFit={"contain"}>
       {children}
-    </Container>
+    </Box>
   );
-  //   return <Image src={defaultBackground} />;
 };
 
 export default Background;
