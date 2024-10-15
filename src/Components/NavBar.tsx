@@ -7,13 +7,9 @@ interface props {
 
 const NavBar = ({ menuItems, id }: props) => {
   return (
-    <HStack id={id} opacity={"50"} justify={"space-evenly"}>
+    <HStack id={id}>
       {menuItems.map((item) => {
-        return (
-          <Text margin={"10px"} opacity={10} key={item}>
-            {item}
-          </Text>
-        );
+        return <Text key={item}>{item}</Text>;
       })}
     </HStack>
   );

@@ -1,18 +1,18 @@
-import Background from "./Components/Background";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
-import { VStack } from "@chakra-ui/react";
+import { Container, Divider } from "@chakra-ui/react";
+import MainArea from "./Components/MainArea";
 
 function App() {
   const menuItems = ["Home", "Gallery", "Book Session", "More"];
 
   return (
-    <VStack id="app" justify={"center"} width={"100%"}>
+    <div id="app">
       <NavBar id="navBar" menuItems={menuItems} />
-      <Background id="mainArea">Main Area</Background>
+      <MainArea id="mainArea">Here's some text</MainArea>
       <Footer id="footer">Footer</Footer>
-    </VStack>
+    </div>
   );
 }
 
