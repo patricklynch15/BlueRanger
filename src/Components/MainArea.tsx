@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 interface props {
@@ -7,7 +6,7 @@ interface props {
 }
 
 const MainArea = ({ children, id }: props) => {
-  return <Box id={id}>{children}</Box>;
+  return <div id={id}>{children}</div>;
 };
 
 export default MainArea;

@@ -1,6 +1,5 @@
 #app {
-  background-color: #abcdef;
-  background-image: url("./Images/15B9D2AD-219B-442E-9DF8-FEF33DF5C2AD.jpeg");
+  background-color: #999999;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,19 +7,44 @@
 }
 
 #navBar {
+  color: #ffffff;
   background-color: #111111;
   font-family: "Courier New", Courier, monospace;
   font-size: large;
   padding: 10px;
   justify-content: space-around;
+  position: relative;
+  width: 100%;
 }
 
 #mainArea {
   /* background-color: grey; */
-  height: 900px;
+  display: grid;
+  height:1000px;
+  flex-grow: 1;
+  /* overflow: hidden; */
 }
+
 
 #footer {
   background-color: springgreen;
-  bottom: 0px;
+  position: relative;
+  width: 100%;
+}
+
+.grid1 {
+  background-color: aqua;
+  column-gap: 3px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "a c d"
+  "a b d"
+  "a e d";
+
+}
+
+.pic {
+  position: relative;
+  object-fit: contain;
 }
