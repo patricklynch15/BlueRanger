@@ -1,9 +1,10 @@
 #app {
-  background-color: #999999;
+  background-color: hsl(261, 88%, 47%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  min-height: 900px;
+  max-height: 1100px;
 }
 
 #navBar {
@@ -14,29 +15,30 @@
   padding: 10px;
   justify-content: space-around;
   position: relative;
-  width: 100%;
+  /* width: 100%; */
+  
 }
 
 #mainArea {
-  /* background-color: grey; */
   display: grid;
-  height:1000px;
   flex-grow: 1;
-  /* overflow: hidden; */
+  overflow: hidden;
+  height: 100%;
 }
 
 
 #footer {
-  background-color: springgreen;
+  background-color: rgb(255, 153, 0);
   position: relative;
   width: 100%;
+  align-items: space-evenly;
 }
 
 .grid1 {
+  /* height: 1000px;; */
   background-color: aqua;
-  column-gap: 3px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 4fr 400px 1fr;
+  grid-template-rows: 1fr 600px 1fr;
   grid-template-areas: 
   "a c d"
   "a b d"

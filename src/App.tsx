@@ -1,9 +1,11 @@
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
+import ImageTile from "./Components/ImageTile";
 import MainArea from "./Components/MainArea";
-import { Box, Container, Grid, GridItem, Image } from '@chakra-ui/react'
-import img1 from "./Images/IMG_6848.jpeg"
+import { Grid, GridItem, Text, Image } from '@chakra-ui/react';
+import testImg from "./Images/DSC03696.jpeg";
+
 
 function App() {
   const menuItems = ["Home", "Gallery", "Book Session", "More"];
@@ -12,28 +14,27 @@ function App() {
     <div id="app">
       <NavBar id="navBar" menuItems={menuItems} />
       <MainArea id="mainArea" >
+        <Text position={"absolute"} top="200px" left="60px">Delete this later...</Text> 
 
-        <Grid className="grid1" >
-        <GridItem gridArea={"a"} bgColor={"brown"}>Af</GridItem>
+      <Grid className="grid1" >
+        <GridItem gridArea={"a"} bgColor={"brown"}></GridItem>
          
-          <GridItem gridArea={"b"} bgColor="blue" objectFit={'fill'}>
-             Here's some more text
-             <Box boxSize={"sm"}>
-              <Image id="pic" src={img1} boxSize={"fit-content"} overflowY={"hidden"}/>
-             </Box>
-          </GridItem>
+        <GridItem gridArea={"b"} bgColor="blue" objectFit={'fill'}>
+          <ImageTile srcName={testImg} alt={testImg}/>
 
-          {/* <GridItem gridArea={"b"} bgColor={"blue"}>Here's some text</GridItem> */}
-          
-          <GridItem gridArea={"d"} bgColor={"greenyellow"}>Here's some text again</GridItem>
-     
-        <GridItem gridArea={"c"} bgColor={"whitesmoke"}>Ag</GridItem>
-        <GridItem gridArea={"e"} bgColor={"whitesmoke"}>Ag</GridItem>
+        </GridItem>
+        <GridItem gridArea={"d"} bgColor={"greenyellow"}></GridItem>
+        <GridItem gridArea={"c"} bgColor={"whitesmoke"}></GridItem>
+        <GridItem gridArea={"e"} bgColor={"whitesmoke"}></GridItem>
         
 
         </Grid>
       </MainArea>
-      <Footer id="footer">Footer</Footer>
+      <Footer id="footer">
+        <div>
+        <i> Blue Ranger LLC </i>
+        </div>
+        </Footer>
     </div>
   );
 }
