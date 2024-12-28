@@ -1,11 +1,13 @@
 #app {
-  background-color: hsl(261, 88%, 47%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 900px;
-  max-height: 1100px;
+  /* min-height: 900px; */
+  /* max-height: 2000px; */
+  overflow: hidden;
+  height: 100%;
 }
+
 
 #navBar {
   color: #ffffff;
@@ -22,21 +24,18 @@
 #mainArea {
   display: grid;
   flex-grow: 1;
-  overflow: hidden;
+  overflow:visible;
   height: 100%;
 }
 
 
 #footer {
   background-color: rgb(255, 153, 0);
-  position: relative;
   width: 100%;
   align-items: space-evenly;
 }
 
 .grid1 {
-  /* height: 1000px;; */
-  background-color: aqua;
   grid-template-columns: 4fr 400px 1fr;
   grid-template-rows: 1fr 600px 1fr;
   grid-template-areas: 
@@ -48,5 +47,21 @@
 
 .pic {
   position: relative;
-  object-fit: contain;
+  object-fit: cover;
+  overflow: hidden;
+  max-width: 600px;
+  min-height: 100%;
+  margin: 5px;
+  border: solid 5px;
+  border-radius: 5%;
+  border-color: silver;
 }
+
+.mainAreaImageTile {
+  background-color: pink;
+  justify-content: space-around;
+  align-content: center;
+  position: relative;
+}
+
+

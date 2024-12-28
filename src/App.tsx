@@ -4,7 +4,7 @@ import Footer from "./Components/Footer";
 import ImageTile from "./Components/ImageTile";
 import MainArea from "./Components/MainArea";
 import { Grid, GridItem, Text, Image } from '@chakra-ui/react';
-import testImg from "./Images/DSC03696.jpeg";
+import testImg from "./Images/IMG_6678.jpeg";
 
 
 function App() {
@@ -14,26 +14,23 @@ function App() {
     <div id="app">
       <NavBar id="navBar" menuItems={menuItems} />
       <MainArea id="mainArea" >
-        <Text position={"absolute"} top="200px" left="60px">Delete this later...</Text> 
+        <Text position={"absolute"} top="100px" left="100px">Delete this later ...</Text> 
 
-      <Grid className="grid1" >
-        <GridItem gridArea={"a"} bgColor={"brown"}></GridItem>
-         
-        <GridItem gridArea={"b"} bgColor="blue" objectFit={'fill'}>
-          <ImageTile srcName={testImg} alt={testImg}/>
+        <Grid className="grid1">
+          <GridItem gridArea={"a"}>Whatever whatever</GridItem>
+          
+          <GridItem gridArea={"b"} objectFit={'fill'}>
+            <ImageTile className="pic" id="mainAreaImageTile" srcName={testImg} alt={testImg}/>
 
-        </GridItem>
-        <GridItem gridArea={"d"} bgColor={"greenyellow"}></GridItem>
-        <GridItem gridArea={"c"} bgColor={"whitesmoke"}></GridItem>
-        <GridItem gridArea={"e"} bgColor={"whitesmoke"}></GridItem>
-        
+          </GridItem>
+          <GridItem gridArea={"d"}></GridItem>
+          <GridItem gridArea={"c"}></GridItem>
+          <GridItem gridArea={"e"}></GridItem>
 
         </Grid>
       </MainArea>
       <Footer id="footer">
-        <div>
         <i> Blue Ranger LLC </i>
-        </div>
         </Footer>
     </div>
   );
